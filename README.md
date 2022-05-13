@@ -28,3 +28,10 @@ As a user I would like to set up notifications so I know when I am running low o
 
 
 API to use: https://developers.artsy.net/v2/docs/artworks
+
+Wireframes:
+
+![1](https://user-images.githubusercontent.com/6979738/168200370-64c2b3fe-c3aa-443c-9094-b91298a3d6d7.png)
+
+
+Component Hierarchy
