@@ -20,9 +20,9 @@ Features:
         
 MVP User Stories
 
-As a User, I want to view a list of all items in my inventory so I can get the big picture of what the compnay is selling.
+As a User, I want to view a list of all items in my inventory so I can get the big picture of what the company is selling.
 
-As a user, I want to manage my inventory, clicking buttons to add, delete, and edit items, and to examine the items details/stock numbers
+As a user, I want to manage my inventory, clicking buttons to add, delete, and edit items, and to examine the items details/stock numbers in order to properly manage my inventory
 
 As a user I would like to set up notifications so I know when I am running low on stock in time to reorder items.
 

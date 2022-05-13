@@ -1,10 +1,15 @@
-import logo from './logo.svg';
+//imports
+import InventoryList from './pages/InventoryList';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello y'all</h1>
+      <Header/>
+      <InventoryList/>
+      <Footer/>
     </div>
   );
 }
