@@ -28,3 +28,16 @@ As a user I would like to set up notifications so I know when I am running low o
 
 
 API to use: https://developers.artsy.net/v2/docs/artworks
+
+Wireframes:
+
+![1](https://user-images.githubusercontent.com/6979738/168200370-64c2b3fe-c3aa-443c-9094-b91298a3d6d7.png)
+![2](https://user-images.githubusercontent.com/6979738/168200437-c80b88b9-9877-4cf3-a598-b786873ccaf1.png)
+![3](https://user-images.githubusercontent.com/6979738/168200439-bfa49c8b-92d8-48b0-8361-ec843d394591.png)
+![4](https://user-images.githubusercontent.com/6979738/168200440-c3eb46fa-ea6a-43e8-895e-b669f072bdaa.png)
+![5](https://user-images.githubusercontent.com/6979738/168200441-03a5596f-f2af-4f1e-9fb3-fc0069236a14.png)
+![6](https://user-images.githubusercontent.com/6979738/168200442-f0f79c03-4bcb-4165-b977-b38430e1e6ba.png)
+![7](https://user-images.githubusercontent.com/6979738/168200445-9688ed06-7152-49ab-a377-5c8850aed587.png)
+
+Component Hierarchy
+![PXL_20220513_021615254](https://user-images.githubusercontent.com/6979738/168200486-28470835-b07f-49c1-856b-19b4ce8fa3c2.jpg)
