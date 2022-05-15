@@ -1,38 +1,45 @@
 //imports
 import InventoryList from './pages/InventoryList';
-import Header from './components/Header';
-import Footer from './components/Footer';
+// import Header from './components/Nav';
+// import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
-import axios from 'axios'
+import { Route, Routes } from 'react-router-dom';
+// import axios from 'axios'
 import './App.css';
+import Login from './pages/Login';
+import Item from './pages/Item';
+import SearchResults from './pages/SearchResults';
+import Edit from './pages/Edit';
+import Add from './pages/Add'
 
 
 function App() {
 
-  useEffect(() => {
-    fetchData()
-  }, [])
+  const [products, setProducts] = useState([])
+
+  fetchData()
 
   async function fetchData() {
-    const url = 'https://swapi.dev/api/starships'
+    const url = 'https://api.color.pizza/v1/212121,060606,ff0012,550055,123456'
     try {
-      const res = await fetch(url)
-      const json = await res.json()
-      //setShips(json.results)
-      console.log(json.results)
+      const data = await fetch(url)
+      console.log(data)
     } catch (err) {
-      throw err
       console.log(err)
+      throw err
     }
   }
 
 
   return (
-    <div className="App">
-      <Header/>
-      <InventoryList/>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path='/' element={<Login />} />
+      <Route path='/products' element={<InventoryList />} />
+      <Route path='/products/add' element={<Add />} />
+      <Route path='/products/edit' element={<Edit />} />
+      <Route path='/products/results' element={<SearchResults />} />
+      <Route path='/products/:id' element={<Item />} />
+    </Routes>
   );
 }
 
