@@ -1,10 +1,18 @@
 //imports
-import { Link } from 'react-router-dom';
+import InventoryList from "../pages/InventoryList"
+import Add from "../pages/Add"
+import Notifications from "../pages/Notifications"
+
 
 function Header() {
     return (
         <nav className='nav'>
-            <h1>header</h1>
+            <p>Header</p>
+            <ul>
+                <li> <InventoryList/> </li>
+                <li> <Add/> </li>
+                <li> <Notifications/> </li>
+            </ul>
         </nav>
     )
 }
