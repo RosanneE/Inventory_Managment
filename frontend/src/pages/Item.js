@@ -1,36 +1,47 @@
 //imports
-import React from "react"
+import React, { useState } from "react"
 import { Link, useParams } from "react-router-dom"
 
 
 const Item = ({ products }) => {
     const { id } = useParams()
-    console.log(id)
+    //console.log(id)
 
-    let product = ""
+    const [item, setItem] = useState(null)
+
 
     async function setProduct() {
         try {
-            product = products.find(prod =>
-                prod.hex.slice(1, product.hex.length) == id
+            let product = await products.find(prod =>
+                prod.hex.substring(1, prod.hex.length) === id
             )
             console.log(product)
-            setProduct()
+            setItem(product)
+
         } catch (error) {
             console.log(error)
             throw error
         }
-        product ? setProduct() : <h2>loading</h2>
     }
+    setProduct()
 
-    return (
-        <div>
-            <h1>Color Name</h1>
-            {console.log(product.name)}
-            <h1>{product.hex}</h1>
-        </div>
-    )
-
+    if (!item) {
+        <h2>loading</h2>
+    } else {
+        return (
+            <div>
+                <h1>Color Name</h1>
+                {console.log(item.name)}
+                <h1>{item.name}</h1>
+                <button className="swatch" style = {{'backgroundColor': item.hex}}></button>
+                <ul>
+                    <li>Hex Code: {item.hex}</li>
+                    <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
+                    <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
+                </ul>
+            </div>
+        )
+    }
 }
 
 //export
