@@ -1,5 +1,5 @@
 //imports
-import React, { useState } from "react"
+import React, { useState, setState, Component } from "react"
 import { Link, useParams } from "react-router-dom"
 
 
@@ -25,8 +25,11 @@ const Item = ({ products }) => {
     }
     setProduct()
 
-    function darkMode(){
+    const [isDark, setIsDark] = useState(false)
 
+    const darkMode = () => {
+        setIsDark(current => !current)
+        console.log("this")
     }
 
     if (!item) {
@@ -34,16 +37,20 @@ const Item = ({ products }) => {
     } else {
         return (
             <div>
-                <h1>Color Name</h1>
-                {console.log(item.name)}
-                <h1>{item.name}</h1>
-                <button className="swatch" style = {{'backgroundColor': item.hex}}></button>
-                <ul>
-                    <li>Hex Code: {item.hex}</li>
-                    <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
-                    <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
-                </ul>
-                <button onClick = {item.darkMode}>Dark Background</button>
+                <div style={{ backgroundColor: isDark ? 'black' : 'white', color: isDark ? 'white' : 'black' }}>
+                    {/* <h1>Color Name</h1>
+                {console.log(item.name)} */}
+                    <h1>{item.name}</h1>
+                    <button className="swatch" style={{ 'backgroundColor': item.hex }}></button>
+                    <ul>
+                        <li>Hex Code: {item.hex}</li>
+                        <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
+                        <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
+                    </ul>
+                </div>
+                <div>
+                    <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
+                </div>
             </div>
         )
     }

@@ -15,7 +15,7 @@ const InventoryList = ({products}) => {
                     {/* ternery checks that products is not null */}
                     {products ? products.map((product, hex) =>
                         <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
-                            <h2>{product.name}</h2>
+                            <h2 className="colorName">{product.name}</h2>
                         </Link>
                     ) : <h2>Loading</h2>}
                 </div>

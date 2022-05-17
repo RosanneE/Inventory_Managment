@@ -7,7 +7,7 @@ import './App.css';
 import Main from './pages/Main';
 import Color from './pages/Color';
 import axios from 'axios';
-import React, {useState,useEffect} from "react"
+import React, {useState,useEffect, Component} from "react"
 import SearchResults from './pages/SearchResults';
 
 function App(props) {
