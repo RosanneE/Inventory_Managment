@@ -11,6 +11,9 @@ const InventoryList = ({ products }) => {
     const updateSearch = e => {
         setSearchTerm(e.target.value)
     }
+    const filterBy = term => {
+        const updatedList = products.filter(listColor => listColor !== term)
+    }
 
     return (
         <div>
@@ -24,13 +27,16 @@ const InventoryList = ({ products }) => {
                         value = {searchTerm}
                         onChange = {updateSearch}
                         />
+                        <button onClick={filterBy}>Search</button>
                     </form>
                 </div>
                 <div className="productsList">
                     {/* ternery checks that products is not null */}
-                    {products ? products.map((product, hex) =>
+                    {products ? products.map ((product, hex) =>
                         <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
+                            {product.name !== searchTerm}{
                             <h2 className="colorName" style={{ 'color': product.hex }}>{product.name}</h2>
+                            } 
                         </Link>
                     ) : <h2>Loading</h2>}
                 </div>
