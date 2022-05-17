@@ -5,12 +5,27 @@ import { Link } from "react-router-dom"
 import App from "../App"
 import Item from "./Color"
 
-const InventoryList = ({products}) => {
+const InventoryList = ({ products }) => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const updateSearch = e => {
+        setSearchTerm(e.target.value)
+    }
 
     return (
         <div>
             <div className="products">
                 <h1>Inventory List</h1>
+                <div className="searchBar">
+                    <form>
+                        <label>Search by color name or Hex Code: </label>
+                        <input 
+                        placeholder="Search Here"
+                        value = {searchTerm}
+                        onChange = {updateSearch}
+                        />
+                    </form>
+                </div>
                 <div className="productsList">
                     {/* ternery checks that products is not null */}
                     {products ? products.map((product, hex) =>

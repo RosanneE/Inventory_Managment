@@ -1,6 +1,6 @@
 Swatch it Color Picking Website
 
-My app is called Swatch it.  It allows users to view colors names, hex, rgb, and hsl codes for use in design projects.  The website will allow the user to search colors by name and hex code, and then pull up the individual color to obtain rbg and hsl information, as well as view the color.  As stretch goals, I hope to make the search bar dynamic, add a feature to allow the user to view the color agains both dark, light, and contrasting backgrounds, view similar colors to the currently selected, and create a loading animation.
+My app is called Swatch It.  It allows users to view colors names, hex, rgb, and hsl codes for use in design projects.  The website will allow the user to search colors by name and hex code, and then pull up the individual color to obtain rbg and hsl information, as well as view the color.  As stretch goals, I hope to make the search bar dynamic, add a feature to allow the user to view the color agains both dark, light, and contrasting backgrounds, view similar colors to the currently selected, and create a loading animation.
 
 Features: 
 
@@ -34,4 +34,4 @@ API:
 Refference Code:
     -onClick background change (https://bobbyhadz.com/blog/react-change-background-color-on-click)
     -Loading animation (https://codesandbox.io/embed/0p1zmpk4yl)
-    -Active Search Bar ()
+    -Dynamic Search Bar (https://www.codegrepper.com/profile/exuberant-elk-hc4tzab35ryi)
