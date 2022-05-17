@@ -1,4 +1,5 @@
 .App {
+  color:black;
   text-align: center;
 }
 
@@ -39,5 +40,7 @@
 .swatch{
 background-color: black;
 height: 50px;
-width: 50px
+width: 50px;
+padding: 50px;
+margin: 50px
 }

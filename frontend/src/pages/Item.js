@@ -25,6 +25,10 @@ const Item = ({ products }) => {
     }
     setProduct()
 
+    function darkMode(){
+
+    }
+
     if (!item) {
         <h2>loading</h2>
     } else {
@@ -39,6 +43,7 @@ const Item = ({ products }) => {
                     <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
                     <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
                 </ul>
+                <button onClick = {item.darkMode}>Dark Background</button>
             </div>
         )
     }
