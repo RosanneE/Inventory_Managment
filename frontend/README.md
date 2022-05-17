@@ -24,3 +24,5 @@ MVP User Stories
 As a user, I can view a list of colors and search them by name or hex code in order to find colors to use in design projects
 
 As a user, I am able to select colors to view them and get additional information in order to use the colors in design projects
+
+As a user, I will be able to get the information I need to code colors into design products from this website
