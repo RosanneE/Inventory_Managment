@@ -1,15 +1,14 @@
 //imports
 import React, { useState, useEffect } from "react"
-import axios from "axios"
 import { Link } from "react-router-dom"
-import App from "../App"
-import Item from "./Color"
 
 const InventoryList = ({ products }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const updateSearch = e => {
         setSearchTerm(e.target.value)
+        filterBy(e.target.value)
+        console.log(searchTerm)
     }
     const filterBy = term => {
         const updatedList = products.filter(listColor => listColor !== term)
@@ -22,23 +21,29 @@ const InventoryList = ({ products }) => {
                 <div className="searchBar">
                     <form>
                         <label>Search by color name or Hex Code: </label>
-                        <input 
-                        placeholder="Search Here"
-                        value = {searchTerm}
-                        onChange = {updateSearch}
+                        <input
+                            placeholder="Search Here"
+                            value={searchTerm}
+                            onChange={updateSearch}
                         />
-                        <button onClick={filterBy}>Search</button>
+                        {/* <button onClick={filterBy}>Search</button> */}
                     </form>
                 </div>
                 <div className="productsList">
                     {/* ternery checks that products is not null */}
-                    {products ? products.map ((product, hex) =>
+                    {products ? products.map((product, hex) => {
+                        return(
+                            //checks for current search term inside of product's names, does not map if is not contained
+                            //****TRY TO MAKE IT CASE INSENSATIVE (tried a.tolowercase, didn't work)
+                        (searchTerm !== null && product.name.includes(searchTerm)) ?
+                        //map products to links/list
                         <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
-                            {product.name !== searchTerm}{
                             <h2 className="colorName" style={{ 'color': product.hex }}>{product.name}</h2>
-                            } 
+
                         </Link>
-                    ) : <h2>Loading</h2>}
+                        : null ) }
+                    ) : <h2>Loading</h2>
+                    }
                 </div>
             </div>
         </div>
