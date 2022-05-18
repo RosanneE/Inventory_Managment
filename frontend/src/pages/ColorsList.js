@@ -1,6 +1,7 @@
 //imports
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
+import Loading from "../components/Loading";
 
 const InventoryList = ({ products }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -36,7 +37,7 @@ const InventoryList = ({ products }) => {
                             <h2 className="colorName" style={{ 'color': product.hex }}>{product.name}</h2>
                         </Link>
                         : null ) }
-                    ) : <h2>Loading</h2>
+                    ) : <Loading/>
                     }
                 </div>
             </div>

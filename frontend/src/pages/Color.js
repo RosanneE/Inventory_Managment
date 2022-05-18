@@ -37,9 +37,9 @@ const Item = ({ products }) => {
     } else {
         return (
             <div>
+                {/* Toggles background from black to white */}
                 <div style={{ backgroundColor: isDark ? 'black' : 'white', color: isDark ? 'white' : 'black' }}>
-                    {/* <h1>Color Name</h1>
-                {console.log(item.name)} */}
+                    {/* mapped info on color */}
                     <h1>{item.name}</h1>
                     <button className="swatch" style={{ 'backgroundColor': item.hex }}></button>
                     <ul>
@@ -49,6 +49,7 @@ const Item = ({ products }) => {
                     </ul>
                 </div>
                 <div>
+                    {/* black and white toggle */}
                     <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
                 </div>
             </div>

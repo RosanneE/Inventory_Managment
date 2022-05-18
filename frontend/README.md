@@ -33,7 +33,10 @@ API:
 
 Refference Code:
     -onClick background change (https://bobbyhadz.com/blog/react-change-background-color-on-click)
-    -Loading animation (https://codesandbox.io/embed/0p1zmpk4yl)
+    -Loading animation (https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1)
 
 Stretch:
 -color blindness simulator
+-similar color options
+-contrasting color options
+-loading animations

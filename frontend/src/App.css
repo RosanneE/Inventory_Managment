@@ -24,6 +24,23 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.loading {
+  color: white;
+  background-color: blue;
+  animation-name: colorChange;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorChange {
+  from {color: white; background-color: blue;}
+  to {color:black; background-color: yellow;}
+}
+  /* position: relative;
+  height: 15px;
+  width: 15px;
+  animation: bounce 3s infinite;
+} */
 
 .App-link {
   color: #61dafb;
