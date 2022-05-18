@@ -1,6 +1,6 @@
 //imports
 
-const ColorSort = ({ products }) => {
+const ColorSort = () => {
 
     const colors = [
         { name: 'red', leadColor: [255, 0, 0], colors: [] },
