@@ -17,7 +17,7 @@ function App(props) {
   useEffect(() => {
       const fetchData = async () => {
           try {
-              const data = await axios(" https://api.color.pizza/v1/212121,060606,ff0012,550055,123456", {
+              const data = await axios("https://api.color.pizza/v1/", {
               })
               setProducts(data.data.colors)
               //console.log(products)
@@ -36,7 +36,7 @@ function App(props) {
       <Nav/>
     <Routes>
       <Route path='/' element={<Main />} />
-      <Route path='/product/:id' element={<Color products = {products}/>} />
+      <Route path='/product/:id/*' element={<Color products = {products}/>} />
       <Route path='/products/' element={<ColorsList products = {products}/>} />
       <Route path='/products/results' element={<SearchResults />} />
     </Routes>

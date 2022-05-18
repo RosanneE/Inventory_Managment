@@ -1,14 +1,15 @@
 //imports
-import React, { useState, setState, Component } from "react"
-import { Link, useParams } from "react-router-dom"
+import React, { useState } from "react"
+import { Link, useParams, Route, Routes } from "react-router-dom"
+import Loading from "../components/Loading"
+import Variations from "../components/Variations"
 
 
 const Item = ({ products }) => {
     const { id } = useParams()
-    //console.log(id)
+    //console.log(products)
 
     const [item, setItem] = useState(null)
-
 
     async function setProduct() {
         try {
@@ -32,8 +33,10 @@ const Item = ({ products }) => {
         console.log("this")
     }
 
+    
+
     if (!item) {
-        <h2>loading</h2>
+        <Loading />
     } else {
         return (
             <div>
@@ -52,6 +55,7 @@ const Item = ({ products }) => {
                     {/* black and white toggle */}
                     <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
                 </div>
+                <Variations item = {item}/>
             </div>
         )
     }
