@@ -2,12 +2,12 @@
 import ColorsList from './pages/ColorsList';
 import Nav from './components/Nav';
 // import Footer from './components/Footer';
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Main from './pages/Main';
 import Color from './pages/Color';
 import axios from 'axios';
-import React, {useState,useEffect, Component} from "react"
+import React, {useState,useEffect } from "react"
 import SearchResults from './pages/SearchResults';
 
 function App(props) {
@@ -29,7 +29,7 @@ function App(props) {
       fetchData()
   }, [])
 
-  const item = (products)
+  // const item = (products)
 
   return (
     <div>

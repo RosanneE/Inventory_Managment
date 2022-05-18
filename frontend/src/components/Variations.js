@@ -39,5 +39,3 @@ const Variations = ({ item }) => {
       )
 }
 export default Variations
-
-{/* <div className="swatchTwo" style={{ 'backgroundColor': `rgb${({ r }, { g }, { b })}` }}></div> */ }
