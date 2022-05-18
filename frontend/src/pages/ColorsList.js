@@ -1,5 +1,5 @@
 //imports
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
 const InventoryList = ({ products }) => {
@@ -7,11 +7,7 @@ const InventoryList = ({ products }) => {
 
     const updateSearch = e => {
         setSearchTerm(e.target.value)
-        filterBy(e.target.value)
         console.log(searchTerm)
-    }
-    const filterBy = term => {
-        const updatedList = products.filter(listColor => listColor !== term)
     }
 
     return (
@@ -26,7 +22,6 @@ const InventoryList = ({ products }) => {
                             value={searchTerm}
                             onChange={updateSearch}
                         />
-                        {/* <button onClick={filterBy}>Search</button> */}
                     </form>
                 </div>
                 <div className="productsList">
@@ -39,7 +34,6 @@ const InventoryList = ({ products }) => {
                         //map products to links/list
                         <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
                             <h2 className="colorName" style={{ 'color': product.hex }}>{product.name}</h2>
-
                         </Link>
                         : null ) }
                     ) : <h2>Loading</h2>
