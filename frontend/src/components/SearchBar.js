@@ -1,12 +1,8 @@
 //imports
-import React, {useState} from "react";
 
 //Loading Animation (used in Color and ColorsList)
 
-const SearchBar = (searchTerm, setSearchTerm) => {
-    const updateSearch = e => {
-        setSearchTerm(e.target.value)
-    }
+const SearchBar = ({searchTerm, updateSearch}) => {
 
     return (
         <div className="searchBar">

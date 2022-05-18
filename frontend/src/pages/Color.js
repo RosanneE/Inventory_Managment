@@ -1,6 +1,6 @@
 //imports
 import React, { useState } from "react"
-import { Link, useParams, Route, Routes } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import Loading from "../components/Loading"
 import Variations from "../components/Variations"
 
@@ -30,20 +30,19 @@ const Item = ({ products }) => {
 
     const darkMode = () => {
         setIsDark(current => !current)
-        console.log("this")
     }
-
-    
 
     if (!item) {
         <Loading />
     } else {
         return (
-            <div>
+            <div style={{ backgroundColor: isDark ? 'black' : 'white', color: isDark ? 'white' : 'black' }}>
                 {/* Toggles background from black to white */}
-                <div style={{ backgroundColor: isDark ? 'black' : 'white', color: isDark ? 'white' : 'black' }}>
+                <div>
                     {/* mapped info on color */}
                     <h1>{item.name}</h1>
+                    <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
+                    <div></div>
                     <button className="swatch" style={{ 'backgroundColor': item.hex }}></button>
                     <ul>
                         <li>Hex Code: {item.hex}</li>
@@ -53,7 +52,6 @@ const Item = ({ products }) => {
                 </div>
                 <div>
                     {/* black and white toggle */}
-                    <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
                 </div>
                 <Variations item = {item}/>
             </div>

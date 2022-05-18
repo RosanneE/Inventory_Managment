@@ -2,7 +2,6 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Loading from "../components/Loading";
-import Variations from "../components/Variations";
 import SearchBar from "../components/SearchBar";
 
 const InventoryList = ({ products }) => {
@@ -17,8 +16,8 @@ const InventoryList = ({ products }) => {
         <div>
             <div className="products">
                 <h1>Inventory List</h1>
-                {/* <SearchBar/> */}
-                <div className="searchBar">
+                <SearchBar updateSearch={updateSearch} searchTerm = {searchTerm}/>
+                {/* <div className="searchBar">
                     <form>
                         <label>Search by Color Name or Hex Code: </label>
                         <input
@@ -27,7 +26,7 @@ const InventoryList = ({ products }) => {
                             onChange={updateSearch}
                         />
                     </form>
-                </div>
+                </div> */}
                 <div className="productsList">
                     {/* ternery checks that products is not null */}
                     {products ? products.map((product, hex) => {
