@@ -1,7 +1,5 @@
 //imports
 import { Link } from "react-router-dom"
-import ColorSort from "../components/ColorSort"
-import MapColors from "../components/MapColors"
 import Loading from "../components/Loading"
 
 const Login = ({products}) => {

@@ -1,5 +1,4 @@
 //imports
-import { Link } from "react-router-dom"
 import MapColors from "../components/MapColors"
 const SearchResults = () => {
     return(

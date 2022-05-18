@@ -1,7 +1,5 @@
-import { useParams } from "react-router-dom";
 import React, { useState } from "react";
-import Item from "../pages/Color";
-import ColorSort from "./ColorSort";
+
 
 //displays variations on the original color
 const Variations = ({ item }) => {
