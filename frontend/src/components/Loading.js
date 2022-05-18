@@ -1,6 +1,6 @@
 //imports
 
-
+//Loading Animation (used in Color and ColorsList)
 const Loading = (props) => {
     return (
         <div>

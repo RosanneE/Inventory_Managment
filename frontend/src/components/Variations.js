@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import Item from "../pages/Color";
 
+//displays variations on the original color
 const Variations = ({item}) => {
    console.log(item)
-    console.log()
 	return (
 		<div className="colorVar">
             <h3>Variations</h3>

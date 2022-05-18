@@ -2,6 +2,8 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Loading from "../components/Loading";
+import Variations from "../components/Variations";
+import SearchBar from "../components/SearchBar";
 
 const InventoryList = ({ products }) => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -15,9 +17,10 @@ const InventoryList = ({ products }) => {
         <div>
             <div className="products">
                 <h1>Inventory List</h1>
+                {/* <SearchBar/> */}
                 <div className="searchBar">
                     <form>
-                        <label>Search by color name or Hex Code: </label>
+                        <label>Search by Color Name or Hex Code: </label>
                         <input
                             placeholder="Search Here"
                             value={searchTerm}
