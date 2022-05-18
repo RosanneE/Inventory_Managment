@@ -68,6 +68,13 @@ width: 50px;
 padding: 50px;
 margin: 50px
 }
+.swatchTwo{
+ background-color: rgb(0,0,0);
+  height: 50px;
+  width: 50px;
+  padding: 50px;
+  margin: 50px
+  }
 
 .colorChangeClick {
   background-color: white;

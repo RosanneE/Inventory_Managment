@@ -1,32 +1,47 @@
 import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 import Item from "../pages/Color";
 import ColorSort from "./ColorSort";
 
 //displays variations on the original color
-const Variations = ({item}) => {
-function light(r, b, g){
+const Variations = ({ item }) => {
+      let [r, setR] = useState(item.rgb.r)
+      let [g, setG] = useState(item.rgb.g)
+      let [b, setB] = useState(item.rgb.b)
+      let colorString = `rgb(${r},${g},${b})`
 
-  //make turnery
-      if ( r > 255 ) r = 255
-      else if  (r < 0) r = 0
-  
-      if ( b > 255 ) b = 255
-      else if  (b < 0) b = 0
-  
-      if ( g > 255 ) g = 255
-      else if  ( g < 0 ) g = 0
-}
+      function light() {
+
+            if (r < 255 && g < 255 && b < 255) {
+            setR(r + 10)
+            setG(g + 10)
+            setB(b + 10)
+            }
+      }
+      function dark() {
+
+            if (r > 0 && g > 0 && b > 0) {
+                  setR(r - 10)
+                  setG(g - 10)
+                  setB(b - 10)
+                  colorString = `rgb(${r},${g},${b})`
+                  console.log(colorString)
+            }
+      }
 
 
-	return (
-		<div className="colorVar">
-            <h3>Variations</h3>
-            <div className="swatch" style={{'background-color': item.hex}}></div>
-            {/* <ColorSort/> */}
-            <h3>New RBG Values: {}</h3>
-            <button onClick={light(item.rbg.r, item.rbg.b, item.rgb.g)}>Lighter</button>
-            <button>Darker</button>
-		</div>
-	)
+
+      return (
+            <div className="colorVar">
+                  <h3>Variations</h3>
+                  <div className="swatchTwo" style={{ 'backgroundColor': colorString }}></div>
+                  {/* <ColorSort/> */}
+                  <h3>RGG Values: {r}, {g}, {b}</h3>
+                  <button onClick={light}>Lighter</button>
+                  <button onClick={dark}>Darker</button>
+            </div>
+      )
 }
 export default Variations
+
+{/* <div className="swatchTwo" style={{ 'backgroundColor': `rgb${({ r }, { g }, { b })}` }}></div> */ }
