@@ -34,7 +34,7 @@ API:
 Reference Code:
     -Loading animation (https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1)
     -color sorting (https://tomekdev.com/posts/sorting-colors-in-js)
-    -brighten/darken ()
+    -brighten/darken (https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors)
 
 Stretch:
 -color blindness simulator
