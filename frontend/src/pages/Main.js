@@ -1,21 +1,28 @@
 //imports
+import { Link } from "react-router-dom"
+import ColorSort from "../components/ColorSort"
+import MapColors from "../components/MapColors"
+import Loading from "../components/Loading"
 
-const Login = () => {
+const Login = ({products}) => {
+
     return (
         <div>
-            <h1>Login</h1>
-            <div>
-                <form>
-                    <label>
-                        <span>Company Name: </span>
-                        <input/>
-                    </label>
-                    <label>
-                        <span>Company Code: </span>
-                        <input/>
-                    </label>
-                </form>
-            </div>
+            <h1>Hues Your Own Adventure!</h1>
+                {/* <MapColors/> */}
+        <div className="productsList">
+            {/* ternery checks that products is not null */}
+            {products ? products.map((product, hex) => { 
+                return (
+                    //map products to links/list
+                    <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
+                        <div className="swatch" style={{ 'color': product.hex, 'background-color': product.hex }}>{product.name}</div>
+                    </Link>
+                )
+            }
+            ) : <Loading />
+            }
+        </div>
         </div>
     )
 }

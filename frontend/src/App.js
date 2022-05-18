@@ -35,10 +35,10 @@ function App(props) {
     <div>
       <Nav/>
     <Routes>
-      <Route path='/' element={<Main />} />
+      <Route path='/'element={<Main products = {products}/>} />
       <Route path='/product/:id/*' element={<Color products = {products}/>} />
       <Route path='/products/' element={<ColorsList products = {products}/>} />
-      <Route path='/products/results' element={<SearchResults />} />
+      <Route path='/products/results' element={<SearchResults products = {products}/>} />
     </Routes>
     </div>
   );

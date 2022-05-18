@@ -31,9 +31,10 @@ API:
     -Complete: https://api.color.pizza/v1/
     -Partial:https://api.color.pizza/v1/212121,060606,ff0012,550055,123456
 
-Refference Code:
-    -onClick background change (https://bobbyhadz.com/blog/react-change-background-color-on-click)
+Reference Code:
     -Loading animation (https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1)
+    -color sorting (https://tomekdev.com/posts/sorting-colors-in-js)
+    -brighten/darken ()
 
 Stretch:
 -color blindness simulator

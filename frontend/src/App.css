@@ -33,7 +33,10 @@
 }
 .colorName:hover {
   background-color: #231f20;
-
+}
+.colorSquare {
+  height: 50px;
+  width: 50px;
 }
 
 @keyframes colorChange {
@@ -59,7 +62,7 @@
   }
 }
 .swatch{
-background-color: black;
+background-color: white;
 height: 50px;
 width: 50px;
 padding: 50px;
@@ -69,6 +72,11 @@ margin: 50px
 .colorChangeClick {
   background-color: white;
 }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
 
 /* colorChangeDark {
 

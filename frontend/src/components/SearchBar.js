@@ -6,7 +6,6 @@ import React, {useState} from "react";
 const SearchBar = (searchTerm, setSearchTerm) => {
     const updateSearch = e => {
         setSearchTerm(e.target.value)
-        console.log(searchTerm)
     }
 
     return (
