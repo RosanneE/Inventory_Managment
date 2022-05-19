@@ -2,14 +2,15 @@
 import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import Loading from "../components/Loading"
-import Variations from "../components/Variations"
-
+import Grayscale from "../components/Grayscale"
+import Hue from "../components/Hue"
+import TintTone from "../components/TintTone"
 
 const Item = ({ products }) => {
-    const { id } = useParams()
-    //console.log(products)
 
+    const { id } = useParams()
     const [item, setItem] = useState(null)
+    const [isDark, setIsDark] = useState(false)
 
     async function setProduct() {
         try {
@@ -26,8 +27,6 @@ const Item = ({ products }) => {
     }
     setProduct()
 
-    const [isDark, setIsDark] = useState(false)
-
     const darkMode = () => {
         setIsDark(current => !current)
     }
@@ -36,24 +35,37 @@ const Item = ({ products }) => {
         <Loading />
     } else {
         return (
-            <div style={{ backgroundColor: isDark ? '#322c2e' : '#eacdc7', color: isDark ? 'white' : 'black' }}>
+            <div className="colorPage" style={{ backgroundColor: isDark ? '#322c2e' : '#eacdc7', color: isDark ? 'white' : 'black' }}>
                 {/* Toggles background from black to white */}
                 <div>
                     {/* mapped info on color */}
                     <h1>{item.name}</h1>
-                    <button className="colorChangeClick" onClick={darkMode}>Dark Background</button>
-                    <div></div>
-                    <button className="swatch" style={{ 'backgroundColor': item.hex }}></button>
-                    <ul>
-                        <li>Hex Code: {item.hex}</li>
-                        <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
-                        <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
-                    </ul>
+                    <h4>Click to change background color</h4>
+                    <button className="colorChangeClick" onClick={darkMode}>{(isDark ? ("Light Background") : ("Dark Background"))}</button>
+                    <div className='ogSwatch'>
+                        <h3>Color Swatch</h3>
+                        <div className="swatchTwo" style={{ 'backgroundColor': item.hex }}></div>
+                        <ul>
+                            <li>Hex Code: {item.hex}</li>
+                            <li>RGB:  ({item.rgb.r},  {item.rgb.g},  {item.rgb.b})</li>
+                            <li>HSL: ({item.hsl.h}, {item.hsl.s}, {item.hsl.l})</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    {/* black and white toggle */}
+                <div className="variations">
+                    <div className="shading">
+                        <h3>Tint and Tone</h3>
+                        <TintTone item={item} />
+                    </div>
+                    <div className="greyscale">
+                        <h3>Grayscale</h3>
+                        <Grayscale item={item} />
+                    </div>
+                    <div className="">
+                        <h3>Hue</h3>
+                        <Hue item={item} />
+                    </div>
                 </div>
-                <Variations item = {item}/>
             </div>
         )
     }

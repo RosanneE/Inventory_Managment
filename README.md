@@ -34,6 +34,7 @@ API:
 Reference Code:
     -Loading animation (https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1)
     -brighten/darken (https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors)
+    -slider Bar (https://ahdev2020.medium.com/how-to-create-range-slider-in-react-9392a123f8fb)
 
 Stretch:
 -color blindness simulator

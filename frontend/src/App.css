@@ -15,20 +15,39 @@ body {
 h1 {
   text-align: center;
   font-size: 50px;
-  font-family:'Oleo Script', cursive;
-  margin: 20px;
+  font-family: 'Limelight', cursive;
   padding: 20px;
   background-color: #fcc006;
   color: #3e4f47;
 }
 
-p{
+ul {
+  list-style-type: none;
+
+}
+
+p {
   text-align: center;
   font-size: 20px;
 }
 
+.colorChangeClick {
+  background-color: white;
+}
+
+.colorName {
+  font-size: 30px;
+  padding: 2px;
+}
+
 .colorName:hover {
   background-color: #231f20;
+  font-weight: bold;
+
+}
+
+.colorPage{
+  padding: 10px;
 }
 
 .colorSquare {
@@ -36,12 +55,8 @@ p{
   width: 50px;
 }
 
-.colorChangeClick {
-  background-color: white;
-}
-
 .intro {
-  margin: 50px,;
+  margin: 50px, ;
   padding: 0px, 50px;
   font-weight: bold;
 }
@@ -73,6 +88,10 @@ p{
   color: #e48d83;
 }
 
+.slider {
+  position: relative
+}
+
 .swatch {
   font-size: small;
   background-color: white;
@@ -82,10 +101,12 @@ p{
   padding: 50px;
   margin: 20px;
   display: inline-flex;
+  justify-content: space-around;
 }
 
 .swatch h3:hover {
-  color: black;
+  color: #3e4f47;
+  width: 40px;
 }
 
 .swatchTwo {
@@ -93,7 +114,13 @@ p{
   height: 50px;
   width: 50px;
   padding: 50px;
-  margin: 50px
+  margin: 50px;
+  filter: grayscale(0%);
+}
+
+.variations {
+  display: inline-flex;
+  text-align: center;
 }
 
 @keyframes colorChange {

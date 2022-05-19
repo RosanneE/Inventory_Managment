@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 
-//displays variations on the original color
-const Variations = ({ item }) => {
+//displays tint and tone variations on the original color
+const TintTone = ({ item }) => {
       let [r, setR] = useState(item.rgb.r)
       let [g, setG] = useState(item.rgb.g)
       let [b, setB] = useState(item.rgb.b)
@@ -28,7 +28,6 @@ const Variations = ({ item }) => {
 
       return (
             <div className="colorVar">
-                  <h3>Variations</h3>
                   <div className="swatchTwo" style={{ 'backgroundColor': colorString }}></div>
                   {/* <ColorSort/> */}
                   <h3>RGG Values: {r}, {g}, {b}</h3>
@@ -38,4 +37,4 @@ const Variations = ({ item }) => {
             </div>
       )
 }
-export default Variations
+export default TintTone
