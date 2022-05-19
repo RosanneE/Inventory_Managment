@@ -16,7 +16,7 @@ const InventoryList = ({ products }) => {
     return (
         <div>
             <div className="products">
-                <h1>Inventory List</h1>
+                <h1>Color Name List</h1>
                 <SearchBar updateSearch={updateSearch} searchTerm = {searchTerm}/>
                 {/* <div className="searchBar">
                     <form>
