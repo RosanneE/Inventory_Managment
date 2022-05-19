@@ -6,6 +6,8 @@ a:active {
 }
 
 body {
+  margin: 20px;
+  padding: 20px;
   background-color: #eacdc7;
   display: flex;
 }
