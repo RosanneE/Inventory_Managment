@@ -1,8 +1,15 @@
-.App {
-  color:black;
+h1 {
   text-align: center;
+  background-color: #e48d83;
 }
-
+.App {
+  color: black;
+  text-align: center;
+  display: flex;
+}
+body {
+  background-color: #eacdc7;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,6 +31,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .loading {
   color: white;
   background-color: blue;
@@ -31,23 +39,27 @@
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
+
 .colorName:hover {
   background-color: #231f20;
 }
+
 .colorSquare {
   height: 50px;
   width: 50px;
 }
 
 @keyframes colorChange {
-  from {color: white; background-color: blue;}
-  to {color:black; background-color: yellow;}
+  from {
+    color: white;
+    background-color: blue;
+  }
+
+  to {
+    color: black;
+    background-color: yellow;
+  }
 }
-  /* position: relative;
-  height: 15px;
-  width: 15px;
-  animation: bounce 3s infinite;
-} */
 
 .App-link {
   color: #61dafb;
@@ -57,34 +69,55 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.swatch{
-background-color: white;
-height: 50px;
-width: 50px;
-padding: 50px;
-margin: 50px
+
+.swatch {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  padding: 50px;
+  margin: 10px;
+  display: inline-flex;
 }
-.swatchTwo{
- background-color: rgb(0,0,0);
+
+.swatchTwo {
+  background-color: rgb(0, 0, 0);
   height: 50px;
   width: 50px;
   padding: 50px;
   margin: 50px
-  }
+}
 
 .colorChangeClick {
   background-color: white;
 }
-
-a, a:hover, a:focus, a:active {
+.swatch h3:hover{
+  color:black;
+}
+a,
+a:hover,
+a:focus,
+a:active {
   text-decoration: none;
 }
-
-
+.navBar{
+  color: #e48d83;
+  background-color: #3e4f47;
+}
+.nav {
+  margin: 10px;
+  padding: 1%;
+  display: inline-flex;
+  justify-content: space-around;
+  
+}
+.navBar a{
+  color: #e48d83;
+}
 /* colorChangeDark {
 
 } */

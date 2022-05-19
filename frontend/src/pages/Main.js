@@ -14,7 +14,7 @@ const Login = ({products}) => {
                 return (
                     //map products to links/list
                     <Link to={`/product/${product.hex.slice(1, product.hex.length)}`} key={product.hex}>
-                        <div className="swatch" style={{ 'color': product.hex, 'background-color': product.hex }}>{product.name}</div>
+                        <div className="swatch" style={{ 'color': product.hex, 'background-color': product.hex }}><h3>{product.name}</h3></div>
                     </Link>
                 )
             }

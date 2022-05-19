@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 //Used in App.js, appears on all pages
 const Nav = (props) => {
 	return (
-		<div className="nav">
-			<Link to="/">
+		<div className="navBar">
+			<Link className= "nav" to="/">
 				<div>Home</div>
 			</Link>
-			<Link to="/products">
+			<Link className= "nav" to="/products">
 				<div>Inventory List</div>
 			</Link>
 		</div>
