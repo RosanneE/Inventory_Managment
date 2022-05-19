@@ -1,43 +1,43 @@
-Inventory Managment Website (Laughing Stock Inventory Managment)
-My app is called Laughing Stock Inventory Managment.  It allows businesses to manage stock/inventory.  It will allow users to create, update, delete and examine inventory items.  It will allow the user to create reminders to reorder inventory items when they reach a certain level. Later, I would like to include user authentication and tracking the rate of sales for items.
+/swatchOut/Swatch it/Hues your own Adventure Color Picking Website
+
+My app is called Swatch It.  It allows users to view colors names, hex, rgb, and hsl codes for use in design projects.  The website will allow the user to search colors by name and hex code, and then pull up the individual color to obtain rbg and hsl information, as well as view the color.  As stretch goals, I hope to make the search bar dynamic, add a feature to allow the user to view the color agains both dark, light, and contrasting backgrounds, view similar colors to the currently selected, and create a loading animation.
 
 Features: 
-    Create, Show, Update, Delete inventory items
-    Track when more supplies need to be ordered
 
-    Components:
-        Search
-            Searches for inventory item
-        Notify
-            create alerts when more inventory is needed
-        Nav
-        Footer
-    Pages
-        Main    
-        ItemsList
-        Item Show
-        Search Results
+-List of colors
+-color details page
+-search
+
+Components:
+
+-Search: 
+    Searches for color by hex or by color name
+-Nav
+-Footer
+-Pages:
+    Main (/), 
+    Color List (/ColorList), 
+    Color Show (/Color/:id)  
         
 MVP User Stories
 
-As a User, I want to view a list of all items in my inventory so I can get the big picture of what the company is selling.
+As a user, I can view a list of colors and search them by name or hex code in order to find colors to use in design projects
 
-As a user, I want to manage my inventory, clicking buttons to add, delete, and edit items, and to examine the items details/stock numbers in order to properly manage my inventory
+As a user, I am able to select colors to view them and get additional information in order to use the colors in design projects
 
-As a user I would like to set up notifications so I know when I am running low on stock in time to reorder items.
+As a user, I will be able to get the information I need to code colors into design products from this website
 
+API: 
+    -Complete: https://api.color.pizza/v1/
+    -Partial (for testing):https://api.color.pizza/v1/212121,060606,ff0012,550055,123456
 
-API to use: https://developers.artsy.net/v2/docs/artworks
+Reference Code:
+    -Loading animation (https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation1)
+    -brighten/darken (https://stackoverflow.com/questions/5560248/programmatically-lighten-or-darken-a-hex-color-or-rgb-and-blend-colors)
 
-Wireframes:
-
-![1](https://user-images.githubusercontent.com/6979738/168200370-64c2b3fe-c3aa-443c-9094-b91298a3d6d7.png)
-![2](https://user-images.githubusercontent.com/6979738/168200437-c80b88b9-9877-4cf3-a598-b786873ccaf1.png)
-![3](https://user-images.githubusercontent.com/6979738/168200439-bfa49c8b-92d8-48b0-8361-ec843d394591.png)
-![4](https://user-images.githubusercontent.com/6979738/168200440-c3eb46fa-ea6a-43e8-895e-b669f072bdaa.png)
-![5](https://user-images.githubusercontent.com/6979738/168200441-03a5596f-f2af-4f1e-9fb3-fc0069236a14.png)
-![6](https://user-images.githubusercontent.com/6979738/168200442-f0f79c03-4bcb-4165-b977-b38430e1e6ba.png)
-![7](https://user-images.githubusercontent.com/6979738/168200445-9688ed06-7152-49ab-a377-5c8850aed587.png)
-
-Component Hierarchy
-![PXL_20220513_021615254](https://user-images.githubusercontent.com/6979738/168200486-28470835-b07f-49c1-856b-19b4ce8fa3c2.jpg)
+Stretch:
+-color blindness simulator
+-similar color options
+-contrasting color options
+-loading animations
+-sort by basic colors (reds, greens, etc.) (https://tomekdev.com/posts/sorting-colors-in-js)
