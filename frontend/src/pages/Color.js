@@ -35,7 +35,7 @@ const Item = ({ products }) => {
         <Loading />
     } else {
         return (
-            <div className="colorPage" style={{ backgroundColor: isDark ? '#322c2e' : '#eacdc7', color: isDark ? 'white' : 'black' }}>
+            <div className="colorPage" style={{ backgroundColor: isDark ? '#0e070d' : '#d7eae5', color: isDark ? 'white' : 'black' }}>
                 {/* Toggles background from black to white */}
                 <div>
                     {/* mapped info on color */}

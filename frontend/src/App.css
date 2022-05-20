@@ -5,14 +5,14 @@ a:active {
   text-decoration: none;
 }
 
-*{
+/* *{
   border: 1px solid #231f20;
-}
+} */
 
 body {
   margin: 20px;
   padding: 20px;
-  background-color: #eacdc7;
+  background-color: #d7eae5;
   display: flex;
 }
 
@@ -21,8 +21,8 @@ h1 {
   font-size: 50px;
   font-family: 'Limelight', cursive;
   padding: 20px;
-  background-color: #fcc006;
-  color: #3e4f47;
+  background-color: #b99294;
+  color: 0e070d;
 }
 
 ul {
@@ -45,7 +45,7 @@ p {
 }
 
 .colorName:hover {
-  background-color: #231f20;
+  background-color: #1b0e1b;
   font-weight: bold;
 
 }
@@ -60,7 +60,7 @@ p {
 }
 
 .intro {
-  max-width: 300px;
+  max-width: 500px;
   margin: 0px auto;
 
   font-weight: bold;
@@ -88,14 +88,14 @@ p {
 }
 
 .navBar {
-  color: #e48d83;
-  background-color: #3e4f47;
+  color: #b99294;
+  background-color: #0e070d;
 }
 
 .navBar a {
   font-size: 30px;
   font-weight: bold;
-  color: #e48d83;
+  color: #b99294;
 }
 .ogSwatch {
   /* text-align: center; */
@@ -117,11 +117,12 @@ p {
   padding: 50px;
   margin: 20px;
   display: inline-flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .swatch h3:hover {
-  color: #3e4f47;
+  color: #0e070d;
   width: 40px;
 }
 
