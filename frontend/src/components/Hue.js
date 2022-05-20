@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 
 //displays variations on the original color
 const Hue = ({ item }) => {
 
     const [filter, onChange] = useState(0);
+
 
     return (
         <div className="colorVar">

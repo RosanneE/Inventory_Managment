@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import { useParams } from "react-router-dom"
 import Loading from "../components/Loading"
 import Grayscale from "../components/Grayscale"
-import Hue from "../components/Hue"
+import Invert from "../components/Invert"
 import TintTone from "../components/TintTone"
 
 const Item = ({ products }) => {
@@ -61,9 +61,9 @@ const Item = ({ products }) => {
                         <h3>Grayscale</h3>
                         <Grayscale item={item} />
                     </div>
-                    <div className="">
-                        <h3>Hue</h3>
-                        <Hue item={item} />
+                    <div className="invert">
+                        <h3>Invert</h3>
+                        <Invert item={item} />
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ import Loading from "../components/Loading"
 const Login = ({ products }) => {
 
     return (
-        <div>
+        <div className="main">
             <h1>Hues Your Own Adventure!</h1>
             <div className="intro">
                 <p>Welcome!</p>
